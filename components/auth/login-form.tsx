@@ -19,14 +19,14 @@ export function LoginForm() {
     setLoading(true)
 
     try {
-      // Simulate successful login - in production, this would call an API
-      if (email && password.length >= 6) {
+      // Only allow login with specific credentials
+      if (email === "devansh@gmail.com" && password === "Devansh@12345") {
         // Store a simple session token
         localStorage.setItem("authToken", "demo-token-" + Date.now())
         localStorage.setItem("userEmail", email)
         router.push("/dashboard")
       } else {
-        setError("Please enter valid credentials")
+        setError("Invalid email or password")
       }
     } catch (err) {
       setError("Login failed. Please try again.")
