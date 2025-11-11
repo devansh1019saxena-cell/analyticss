@@ -1,0 +1,138 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* PVR Color Palette */
+  --pvr-gold: #D3AF37;
+  --pvr-offwhite: #FDFBF7;
+  --pvr-dark: #1A1A1A;
+  --pvr-gray: #666666;
+  --pvr-light-gray: #E5E5E5;
+  --pvr-dark-gray: #2D2D2D;
+  
+  /* Light Theme */
+  --background: var(--pvr-offwhite);
+  --foreground: var(--pvr-dark);
+  --card: var(--pvr-offwhite);
+  --card-foreground: var(--pvr-dark);
+  --popover: var(--pvr-offwhite);
+  --popover-foreground: var(--pvr-dark);
+  --primary: var(--pvr-gold);
+  --primary-foreground: var(--pvr-dark);
+  --secondary: var(--pvr-dark);
+  --secondary-foreground: var(--pvr-offwhite);
+  --muted: #f5f5f5;
+  --muted-foreground: var(--pvr-gray);
+  --accent: var(--pvr-gold);
+  --accent-foreground: var(--pvr-dark);
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --border: var(--pvr-light-gray);
+  --input: var(--pvr-light-gray);
+  --ring: var(--pvr-gold);
+  --radius: 0.5rem;
+  
+  /* Chart Colors */
+  --chart-1: var(--pvr-gold);
+  --chart-2: #A58A2A; /* Darker shade of gold */
+  --chart-3: #77641D; /* Even darker shade of gold */
+  --chart-4: #F5E7C1; /* Light tint of gold */
+  --chart-5: #E9D9A9; /* Slightly darker tint of gold */
+  
+  /* Sidebar */
+  --sidebar: var(--pvr-dark);
+  --sidebar-foreground: var(--pvr-offwhite);
+  --sidebar-primary: var(--pvr-gold);
+  --sidebar-primary-foreground: var(--pvr-dark);
+  --sidebar-accent: var(--pvr-dark-gray);
+  --sidebar-accent-foreground: var(--pvr-offwhite);
+  --sidebar-border: #333333;
+  --sidebar-ring: var(--pvr-gold);
+}
+
+.dark {
+  --background: var(--pvr-dark);
+  --foreground: var(--pvr-offwhite);
+  --card: var(--pvr-dark-gray);
+  --card-foreground: var(--pvr-offwhite);
+  --popover: var(--pvr-dark-gray);
+  --popover-foreground: var(--pvr-offwhite);
+  --primary: var(--pvr-gold);
+  --primary-foreground: var(--pvr-dark);
+  --secondary: var(--pvr-dark-gray);
+  --secondary-foreground: var(--pvr-offwhite);
+  --muted: var(--pvr-dark-gray);
+  --muted-foreground: #a3a3a3;
+  --accent: var(--pvr-gold);
+  --accent-foreground: var(--pvr-dark);
+  --destructive: #7f1d1d;
+  --destructive-foreground: #fecaca;
+  --border: #333333;
+  --input: #333333;
+  --ring: oklch(0.439 0 0);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
+}
+
+@theme inline {
+  /* optional: --font-sans, --font-serif, --font-mono if they are applied in the layout.tsx */
+  --font-sans: "Inter", "system-ui", "sans-serif";
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
