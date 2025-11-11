@@ -9,7 +9,7 @@ export function OverviewCards() {
       value: "24,582",
       trend: "+12.5%",
       trendUp: true,
-      icon: "👥",
+      icon: "",
       color: "blue",
     },
     {
@@ -17,7 +17,7 @@ export function OverviewCards() {
       value: "128,341",
       trend: "+8.2%",
       trendUp: true,
-      icon: "⬇️",
+      icon: "",
       color: "purple",
     },
     {
@@ -25,7 +25,7 @@ export function OverviewCards() {
       value: "8,234",
       trend: "-2.1%",
       trendUp: false,
-      icon: "⚡",
+      icon: "",
       color: "green",
     },
     {
@@ -33,7 +33,7 @@ export function OverviewCards() {
       value: "United States",
       trend: "34.2% of users",
       trendUp: true,
-      icon: "🗺️",
+      icon: "",
       color: "orange",
     },
     {
@@ -41,7 +41,7 @@ export function OverviewCards() {
       value: "6,234",
       trend: "25.3%",
       trendUp: true,
-      icon: "🏢",
+      icon: "",
       color: "indigo",
     },
   ]
